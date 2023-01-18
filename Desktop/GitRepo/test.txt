@@ -1,2 +1,0 @@
-This is just to edit this file and see if I can place this in Github using VScode
-Made some changes and see if this reflected after push to Github repo.
