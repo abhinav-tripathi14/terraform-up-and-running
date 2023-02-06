@@ -20,7 +20,7 @@ resource "aws_launch_configuration" "example" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > index.html
+              echo "Hello, Abhinav - This is terraform up and running v3" > index.html
               nohup busybox httpd -f -p ${var.server_port} &
               EOF
 
@@ -71,7 +71,7 @@ data "aws_subnets" "default" {
 
 resource "aws_lb" "example" {
 
-  name               = var.alb_name
+  name = var.alb_name
 
   load_balancer_type = "application"
   subnets            = data.aws_subnets.default.ids
