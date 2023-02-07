@@ -19,7 +19,10 @@ resource "aws_s3_bucket" "terraform_state" {
 
   // This is only here so we can destroy the bucket as part of automated tests. You should not copy this for production
   // usage
-  force_destroy = true
+  # Prevent accidental deletion of this S3 bucket
+  lifecycle { 
+  prevent_destroy = true
+  }
 
 }
 
